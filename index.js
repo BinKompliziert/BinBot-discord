@@ -98,4 +98,4 @@ client.on('messageCreate', async (message) => {
 })
 
 //BinBot
-client.login(process.env.token)
+client.login('MTM0MTc0MzgxMzc2ODY0NjgwNg.Gio_T_.zr5rkxyodrh2ClwYWWXZII0-O30WD9dT8THFXU')
