@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const { Client, GatewayIntentBits, Partials, GuildInviteManager, GuildMember } = require('discord.js')
 const { ActivityType } = require('discord.js');
 
@@ -98,4 +100,4 @@ client.on('messageCreate', async (message) => {
 })
 
 //BinBot
-client.login('MTM0MTc0MzgxMzc2ODY0NjgwNg.Gio_T_.zr5rkxyodrh2ClwYWWXZII0-O30WD9dT8THFXU')
+client.login(process.env.TOKEN)
