@@ -83,8 +83,8 @@ client.on('messageReactionRemove', async (reaction, user) => {
 })
 
 client.on('guildMemberAdd', (member) => {
-  member.roles.add('1339266733831229533')
-  member.roles.add('1393390109671292979')
+  member.guild.id == '1339144979435749398' ? member.roles.add('1339266733831229533') :
+  member.guild.id == '1393346424615211219' ? member.roles.add('1393390109671292979') : ''
 })
 
 client.on('messageCreate', async (message) => {
