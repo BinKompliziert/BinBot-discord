@@ -33,8 +33,7 @@ client.on('threadCreate', async (thread) => {
 client.on('messageReactionAdd', async (reaction, user) => {
   reaction.partial ? await reaction.fetch() : ''
   //Pin Messages
-  reaction.emoji.id == '1342825416481701993' ? reaction.message.pin() : ''
-  reaction.emoji.id == '1393426303012835412' ? reaction.message.pin() : ''
+  reaction.emoji.id == '1342825416481701993' || reaction.emoji.id == '1393426303012835412' ? reaction.message.pin() : ''
   //Reaction Roles
   if(reaction.message.id == '1344113322253095025'){
     const member = reaction.message.guild.members.cache.find(member => member.id == user.id)
@@ -61,7 +60,7 @@ client.on('messageReactionRemove', async (reaction, user) => {
     reaction.message.reply({
       content: `Unpinned by ${user.displayName}`,
 	  allowedMentions: {
-	    repliedUser: false
+		repliedUser: false
 	  }
     })
   }
