@@ -20,7 +20,7 @@ const client = new Client({
 
 client.on('ready', (c) => {
   console.log(`${c.user.username} is alive`)
-  client.user.setActivity('always 👀', { type: ActivityType.Watching })
+  //client.user.setActivity('always 👀', { type: ActivityType.Watching })
 })
 
 client.on('threadCreate', async (thread) => {
